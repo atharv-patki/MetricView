@@ -1,0 +1,8 @@
+streamlit
+plotly
+pandas
+yfinance
+numpy
+datetime
+streamlit-autorefresh
+pdfkit

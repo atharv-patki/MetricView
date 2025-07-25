@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>KPI Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 40px; color: #333; }
+        h1 { color: #003566; }
+        h2 { color: #0077b6; margin-top: 30px; }
+        table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .section { margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    <p><strong>Date:</strong> {{ date }}</p>
+
+    {% for section in sections %}
+    <div class="section">
+        <h2>{{ section.title }}</h2>
+        <table>
+            <tr>
+                {% for key in section.data[0].keys() %}
+                    <th>{{ key }}</th>
+                {% endfor %}
+            </tr>
+            {% for row in section.data %}
+            <tr>
+                {% for val in row.values() %}
+                    <td>{{ val }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    {% endfor %}
+</body>
+</html>

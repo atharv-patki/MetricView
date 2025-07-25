@@ -1,0 +1,79 @@
+
+/* ===== Layout & Container ===== */
+.main, .block-container {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+
+h1, h2, h3 {
+    color: #003566;  /* Dark blue headline */
+    font-weight: 700;
+}
+
+.subheader {
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+/* ===== Metric Cards ===== */
+[data-testid="stMetricValue"] {
+    font-size: 1.8rem;
+    color: #ffffff !important;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+[data-testid="stMetricDelta"] {
+    font-size: 1.1rem;
+    color: #28a745 !important;
+}
+
+[data-testid="stMetricLabel"] {
+    color: #6c757d;
+}
+
+/* ===== Tables ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+table th, table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+thead {
+    background-color: #343a40; /* Dark header */
+    color: white;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #343a40;
+}
+
+/* Limit rows to 6 including header */
+tbody tr:nth-child(n+6) {
+    display: none;
+}
+
+/* ===== Footer Time Stamp ===== */
+.footer-time {
+    text-align: right;
+    font-size: 14px;
+    color: #999;
+    margin-top: 2rem;
+    margin-right: 1rem;
+}
+
+/* ===== Scrollbar for wide tables (optional) ===== */
+.stTable {
+    overflow-x: auto;
+    white-space: nowrap;
+}
